@@ -14,7 +14,14 @@ weatherForm.addEventListener("submit", async event => {
 
     if(city){
         try {
+            //we wait for the function to return the weather data 
             const weatherData = await getWeatherData(city)
+
+            
+            //once we receive it, we call the displayweather function and pass along the above varuable
+            displayWeatherInfo(weatherData)
+
+
         } catch (error) {
             console.error(error);
             displayError(error)
