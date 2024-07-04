@@ -54,3 +54,13 @@ button[type="submit"]:active{
     flex-direction: column;
     align-items: center;
 }
+
+h1{
+    font-size:2.8rem;
+    margin-bottom: 25px;
+}
+
+p{
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
