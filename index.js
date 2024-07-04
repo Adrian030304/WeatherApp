@@ -36,6 +36,6 @@ function displayError(message){
 
     const errorDisplay = document.createElement("p")
     errorDisplay.textContent = message
-    errorDisplay.classList("errorDisplay")
+    errorDisplay.classList.add("errorDisplay")
 
 }
