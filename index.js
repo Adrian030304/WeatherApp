@@ -17,7 +17,7 @@ weatherForm.addEventListener("submit", async event => {
             //we wait for the function to return the weather data 
             const weatherData = await getWeatherData(city)
 
-            
+
             //once we receive it, we call the displayweather function and pass along the above varuable
             displayWeatherInfo(weatherData)
 
@@ -34,6 +34,14 @@ weatherForm.addEventListener("submit", async event => {
 
 async function getWeatherData(city){
 
+    //we have to fetch the weather data
+
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+    //will be using fetch to get the info
+    const response = await fetch(apiUrl)
+
+    console.log(response)
 }
 
 function displayWeatherInfo(data) {
