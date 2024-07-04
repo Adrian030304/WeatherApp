@@ -5,7 +5,7 @@ const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card")
 const apiKey = "e4f487901b6fa553bee9b703001ccc97"
 
-weatherForm.addEventListener("submit", event => {
+weatherForm.addEventListener("submit", async event => {
 
     //folosim prevent default ca sa prevenim refresh - ul paginii , acesta fiind un lucru defaul al form
     event.preventDefault();
@@ -14,7 +14,7 @@ weatherForm.addEventListener("submit", event => {
 
     if(city){
         try {
-            const weatherData = await getWeatherData()
+            const weatherData = await getWeatherData(city)
         } catch (error) {
             console.error(error);
             displayError(error)
