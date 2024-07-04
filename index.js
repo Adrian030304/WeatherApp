@@ -40,8 +40,11 @@ async function getWeatherData(city){
 
     //will be using fetch to get the info
     const response = await fetch(apiUrl)
-
-    console.log(response)
+    //if the response is not okay
+    if(!response.ok){
+        throw new Error("Could not fetch weather data")
+    }
+    return await response.json()
 }
 
 function displayWeatherInfo(data) {
