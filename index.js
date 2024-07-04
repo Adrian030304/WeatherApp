@@ -49,7 +49,12 @@ async function getWeatherData(city){
 
 function displayWeatherInfo(data) {
 
-    const {name:city,main:{temp,humidity},weather:[{description,id}]} = data
+    const {name:city,
+           main:{temp,humidity},
+           weather:[{description,id}]} = data
+
+    card.textContent = "" // we do this cuz if there is already text here we can reset it
+    card.style.display = "flex"
 }
 
 function getWeatherEmoji(weatherId){
