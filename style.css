@@ -44,3 +44,13 @@ button[type="submit"]:hover{
 button[type="submit"]:active{
     background-color: hsl(0, 98%, 50%);
 }
+
+.card{
+    background:linear-gradient(180deg,hsla(39, 100%, 50%, 0.674),hsla(210, 100%, 50%, 0.784));
+    padding: 50px;
+    box-shadow: 2px 2px 5px hsl(0, 0%, 0%,0.5);
+    min-width: 300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
