@@ -72,15 +72,22 @@ function displayWeatherInfo(data) {
     tempDisplay.classList.add("tempDisplay")
     humidityDisplay.classList.add("humidityDisplay")
     descDisplay.classList.add("descriptionDisplay")
-    
+    weatherEmoji.classList.add("weatherEmoji")
     
     card.appendChild(cityDisplay)
     card.appendChild(tempDisplay)
     card.appendChild(humidityDisplay)
     card.appendChild(descDisplay)
+    card.appendChild(weatherEmoji)
 }
 
 function getWeatherEmoji(weatherId){
+
+
+    switch(true){
+        case (weatherId >=200 && weatherId <300):
+            return "🌩️"
+    }
 
 }
 
