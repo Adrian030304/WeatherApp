@@ -55,6 +55,14 @@ function displayWeatherInfo(data) {
 
     card.textContent = "" // we do this cuz if there is already text here we can reset it
     card.style.display = "flex"
+
+    const cityDisplay = document.createElement("h1")
+    const tempDisplay = document.createElement("p")
+    const humidityDisplay = document.createElement("p")
+    const descDisplay = document.createElement("p")
+    const weatherEmoji = document.createElement("p")
+
+    
 }
 
 function getWeatherEmoji(weatherId){
